@@ -15,6 +15,7 @@ void	bzero(void *s, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_calloc(size_t count, size_t size);
 size_t		ft_strlen(const char *s);
 char *		ft_strchr(const char *s, int c);
 
