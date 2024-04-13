@@ -1,10 +1,10 @@
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
-NAME = libft.a
+LIB_NAME = libft.a
 
-SOURCES =	ft_atoi.c \
+LIB_SRC =		ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
@@ -32,25 +32,35 @@ SOURCES =	ft_atoi.c \
 			ft_tolower.c \
 			ft_toupper.c \
 
-OBJECTS = ${SOURCES:.c=.o}
+LIB_OBJ = ${LIB_SRC:.c=.o}
 
-all: lib
-	cc -g main.c ${NAME}
+EX_NAME = a.out
 
-lib: ${NAME}
+EX_SRC = main.c
 
-${NAME}: ${OBJECTS}
+EX_OBJ = ${EX_SRC:.c=.o}
+
+all: ${EX_NAME}
+
+main: ${EX_OBJ}
+
+lib: ${LIB_NAME}
+
+${EX_NAME}: ${EX_OBJ} ${LIB_NAME}
+	${CC} ${CFLAGS} $^ -o ${EX_NAME}
+
+${LIB_NAME}: ${LIB_OBJ}
 	ar -rcs $@ $^ 
 
 %.o: %.c
-	cc -c $^ -o $@
+	${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-	rm -f ${OBJECTS}
+	rm -f ${LIB_OBJ} ${EX_OBJ}
 
 fclean: clean
-	rm -f ${NAME}
+	rm -f ${LIB_NAME} ${EX_NAME}
 
 re: fclean all
 
-.PHONY: clean fclean re lib
+.PHONY: all clean fclean re lib main
