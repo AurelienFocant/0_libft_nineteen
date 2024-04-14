@@ -41,6 +41,11 @@ LIB_SRC =		ft_atoi.c \
 
 LIB_OBJ = ${LIB_SRC:.c=.o}
 
+BONUS_SRC = 		ft_lstnew.c \
+			ft_lstadd_font.c \
+
+BONUS_OBJ = ${BONUS_SRC:.c=.o}
+
 EX_NAME = a.out
 
 EX_SRC = main.c
@@ -53,6 +58,8 @@ main: ${EX_OBJ}
 
 lib: ${LIB_NAME}
 
+bonus: ${BONUS_OBJ}
+
 ${EX_NAME}: ${EX_OBJ} ${LIB_NAME}
 	${CC} ${CFLAGS} $^ -o ${EX_NAME}
 
@@ -63,10 +70,10 @@ ${LIB_NAME}: ${LIB_OBJ}
 	${CC} ${CFLAGS} -c $< -o $@
 
 clean:
-	rm -f ${LIB_OBJ} ${EX_OBJ}
-
+	rm -f ${LIB_OBJ} ${BONUS_OBJ}
 fclean: clean
-	rm -f ${LIB_NAME} ${EX_NAME}
+	rm -f ${LIB_NAME} ${EX_NAME} ${EX_OBJ}
+
 
 re: fclean all
 

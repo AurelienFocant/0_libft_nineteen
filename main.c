@@ -3,5 +3,8 @@
 
 int main()
 {
-	ft_putnbr_fd(-483648, 1);
+	int n = 5;
+	t_list *ptr;
+	ptr = ft_lstnew(&n);
+	printf("%i\n", *((int *) (ptr->content)));
 }
