@@ -1,24 +1,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-static char uppercut(unsigned int i, char c)
-{
-	(void) i;
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (c);
-}
-
 int main()
 {
-	char *str = "hello bande de cons";
-	char *s;
-
-	char (*f)(unsigned int, char);
-	f = uppercut;
-
-	s = ft_strmapi(str, f);
-
-	printf("%s\n", s);
-
+	ft_putstr_fd("hey you ldjkjajdsfjhasdk fjhsadlkfj hasldkjfh aslkdjfh alksjdhriaosuehrlkja sdnfl kasjdhrp oiuaw priouasd fpiouashdfokiuash edrpiouaheskjhasdlkfjh asldkfb alskdjfp[oawierposauiptiroausdrikuashahjksbdpkausihidrpoiauhropikashdfkasjdhfkjas dhf lkjasdhf paskdhjfj kasdjhf paossuiehirt toaiseut ptoaiushjf ikuasjhgdp ajiw[eopirfj pisauhdf pasdijkfh aopsiuhf alskhjdbf kjashvbf lkasjdnhhb ", 1);
 }
