@@ -63,7 +63,7 @@ bonus: ${BONUS_OBJ}
 ${EX_NAME}: ${EX_OBJ} ${LIB_NAME}
 	${CC} ${CFLAGS} $^ -o ${EX_NAME}
 
-${LIB_NAME}: ${LIB_OBJ}
+${LIB_NAME}: ${LIB_OBJ} ${BONUS_OBJ}
 	ar -rcs $@ $^ 
 
 %.o: %.c
