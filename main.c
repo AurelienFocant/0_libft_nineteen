@@ -28,4 +28,13 @@ int main()
 	t_list *last = ft_lstlast(lst);
 	printf("%i\n", *((int *) (last->content)));
 
+	t_list *new2;
+	int n2 = 13;
+	new2 = ft_lstnew(&n2);
+
+	ft_lstadd_back(&lst, new2);
+	last = ft_lstlast(lst);
+	printf("%i\n", *((int *) (last->content)));
+
+
 }
