@@ -8,13 +8,13 @@ int main()
 	int n = 5;
 	t_list *lst;
 	lst = ft_lstnew(&n);
-	printf("%i\n", *((int *) (lst->content)));
+	//printf("%i\n", *((int *) (lst->content)));
 
-	t_list new1;
+	t_list *new1;
 	int n1 = 8;
-	new1.content = &n1;
-	ft_lstadd_front(&lst, &new1);
-	printf("%i\n", *((int *) (lst->content)));
+	new1 = ft_lstnew(&n1);
+	ft_lstadd_front(&lst, new1);
+	//printf("%i\n", *((int *) (lst->content)));
 
 	t_list *ptr;
 	ptr = lst;
