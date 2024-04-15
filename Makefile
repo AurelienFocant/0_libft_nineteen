@@ -42,6 +42,7 @@ LIB_SRC =		ft_atoi.c \
 LIB_OBJ = ${LIB_SRC:.c=.o}
 
 BONUS_SRC = 		ft_lstadd_font.c \
+	 		ft_lstlast.c \
 	 		ft_lstnew.c \
 	 		ft_lstsize.c \
 

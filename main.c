@@ -24,4 +24,8 @@ int main()
 		ptr = ptr->next;
 	}
 	printf("%i\n", ft_lstsize(lst));
+
+	t_list *last = ft_lstlast(lst);
+	printf("%i\n", *((int *) (last->content)));
+
 }
