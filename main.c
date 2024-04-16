@@ -49,17 +49,25 @@ int main()
 
 
 	t_list *start;
+	t_list *ptr2;
 
 	start = lst;
 	ptr = lst;
-	while (*(int*)ptr->content != 5)
-		ptr = ptr->next;
-	ft_lstclear(&ptr, del);
-	ptr = lst;
 	while (ptr)
 	{
-		printf("%i\n", *((int *) (ptr->content)));
+		if (*(int*)ptr->content == 5)
+		{
+			ptr->next = NULL;
+			break;
+		}
 		ptr = ptr->next;
+	}
+	ft_lstclear(&ptr, del);
+	ptr2 = lst;
+	while (ptr2 != NULL)
+	{
+		printf("%i\n", *((int *) (ptr2->content)));
+		ptr2 = ptr2->next;
 	}
 	printf("There are %i nodes\n", ft_lstsize(start));
 }
