@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror -g
 
 LIB_NAME = libft.a
 
-LIB_SRC =		ft_atoi.c \
+LIB_SRC =	ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_isalnum.c \
@@ -41,8 +41,10 @@ LIB_SRC =		ft_atoi.c \
 
 LIB_OBJ = ${LIB_SRC:.c=.o}
 
-BONUS_SRC = 		ft_lstadd_back.c \
+BONUS_SRC =	ft_lstadd_back.c \
 			ft_lstadd_front.c \
+	 		ft_lstclear.c \
+	 		ft_lstdelone.c \
 	 		ft_lstlast.c \
 	 		ft_lstnew.c \
 	 		ft_lstsize.c \

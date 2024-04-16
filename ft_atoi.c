@@ -20,3 +20,12 @@ int	ft_atoi(const char *str)
 		n = (n * 10) + (*str++ - '0');
 	return (n * neg_flag);
 }
+
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+	printf("%d\n", atoi("-6516152168465132132168765"));
+	printf("%d\n", ft_atoi("6516152168465132132168765"));
+}
