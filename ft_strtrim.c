@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/17 21:07:11 by afocant           #+#    #+#             */
+/*   Updated: 2024/04/17 21:07:12 by afocant          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t start;
-	size_t end;
+	size_t	start;
+	size_t	end;
 
 	start = 0;
 	end = ft_strlen(s1) - 1;

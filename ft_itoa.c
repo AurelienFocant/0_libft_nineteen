@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/17 20:50:36 by afocant           #+#    #+#             */
+/*   Updated: 2024/04/17 20:50:37 by afocant          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_getlen(int n)
 {
-	int len;
+	int	len;
 
 	if (n == 0)
 		return (1);
@@ -27,10 +39,10 @@ static unsigned int	ft_is_negative(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*nbr;
-	int		len;
 	unsigned int	unsigned_n;
-	
+	char			*nbr;
+	int				len;
+
 	len = ft_getlen(n);
 	unsigned_n = ft_is_negative(n);
 	nbr = malloc((len + 1) * sizeof(char));
@@ -44,7 +56,7 @@ char	*ft_itoa(int n)
 	while (unsigned_n)
 	{
 		nbr[--len] = (unsigned_n % 10) + '0';
-		unsigned_n /= 10;		
+		unsigned_n /= 10;
 	}
 	return (nbr);
 }

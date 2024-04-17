@@ -1,11 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/17 20:47:38 by afocant           #+#    #+#             */
+/*   Updated: 2024/04/17 20:47:43 by afocant          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_bzero(void *s, size_t n)
-{
-	while (n--)
-		*((char *) s++) = 0;
-	return;
-}
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

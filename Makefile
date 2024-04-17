@@ -1,9 +1,3 @@
-CC = gcc
-
-CFLAGS = -Wall -Wextra -Werror -g
-
-LIB_NAME = libft.a
-
 LIB_SRC =	ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
@@ -53,25 +47,26 @@ BONUS_SRC =	ft_lstadd_back.c \
 
 BONUS_OBJ = ${BONUS_SRC:.c=.o}
 
-EX_NAME = a.out
+#################################################
 
-EX_SRC = main.c
+CC = gcc
 
-EX_OBJ = ${EX_SRC:.c=.o}
+CFLAGS = -Wall -Wextra -Werror
 
-all: ${EX_NAME}
+G_FLAG = -g
 
-main: ${EX_OBJ}
+#################################################
 
-lib: ${LIB_NAME}
+NAME = libft.a
 
-bonus: ${BONUS_OBJ}
+all: ${NAME}
 
-${EX_NAME}: ${EX_OBJ} ${LIB_NAME}
-	${CC} ${CFLAGS} $^ -o ${EX_NAME}
-
-${LIB_NAME}: ${LIB_OBJ} ${BONUS_OBJ}
+${NAME}: ${LIB_OBJ}
 	ar -rcs $@ $^ 
+
+bonus: ${BONUS_OBJ} ${LIB_NAME}
+	ar -rcs ${NAME} ${BONUS_OBJ}
+
 
 %.o: %.c
 	${CC} ${CFLAGS} -c $< -o $@
@@ -79,9 +74,8 @@ ${LIB_NAME}: ${LIB_OBJ} ${BONUS_OBJ}
 clean:
 	rm -f ${LIB_OBJ} ${BONUS_OBJ}
 fclean: clean
-	rm -f ${LIB_NAME} ${EX_NAME} ${EX_OBJ}
-
+	rm -f ${NAME}
 
 re: fclean all
 
-.PHONY: all clean fclean re lib main
+.PHONY: all clean fclean re

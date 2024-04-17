@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/17 21:00:58 by afocant           #+#    #+#             */
+/*   Updated: 2024/04/17 21:01:00 by afocant          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_is_sep(char c, char sep)
@@ -19,11 +31,11 @@ static unsigned int	ft_count_strs(const char *s, char c)
 			s++;
 		if (!ft_is_sep(*s, c) && *s)
 		{
-			count++;	
+			count++;
 			while (!ft_is_sep(*s, c) && *s)
 				s++;
 		}
-	}	
+	}
 	return (count);
 }
 
@@ -34,20 +46,19 @@ static unsigned int	ft_len_strsep(const char *s, char c)
 	len = 0;
 	while (!ft_is_sep(*s, c) && *s)
 	{
-		len++;	
+		len++;
 		s++;
 	}
 	return (len);
-
 }
 
 char	**ft_split(char const *s, char c)
 {
 	unsigned int	strs_count;
-	char		**split_s;
+	char			**split_s;
 	unsigned int	i;
 
-	strs_count = ft_count_strs(s, c);	
+	strs_count = ft_count_strs(s, c);
 	split_s = malloc((strs_count + 1) * sizeof(char *));
 	if (!split_s)
 		return (NULL);
