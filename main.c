@@ -6,10 +6,16 @@ void	ft_delete(void *n)
 	*((int *) n) = 0;
 }
 
+void	ft_add_three(void *n)
+{
+	*(int*) n += 3;
+}
+
 int main()
 {
 	t_list *ptr;
 	void (*del)(void *);
+	void (*add)(void *);
 	del = ft_delete;
 
 	t_list *lst;
@@ -48,26 +54,23 @@ int main()
 	printf("\n");
 
 
-	t_list *start;
-	t_list *ptr2;
-
-	start = lst;
 	ptr = lst;
+	add = ft_add_three;
+	ft_lstiter(ptr, add);
 	while (ptr)
 	{
-		if (*(int*)ptr->content == 5)
-		{
-			ptr->next = NULL;
-			break;
-		}
+		printf("%i\n", *((int *) (ptr->content)));
 		ptr = ptr->next;
 	}
-	ft_lstclear(&ptr, del);
-	ptr2 = lst;
-	while (ptr2 != NULL)
-	{
-		printf("%i\n", *((int *) (ptr2->content)));
-		ptr2 = ptr2->next;
-	}
-	printf("There are %i nodes\n", ft_lstsize(start));
+	printf("There are %i nodes\n", ft_lstsize(lst));
+	printf("\n");
+	printf("\n");
+
+
+
+	ft_lstclear(&lst, del);
+	if (lst)
+		printf("list still exists");
+	else
+		printf("list deleted");
 }
