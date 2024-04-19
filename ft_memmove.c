@@ -21,11 +21,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		if (dst < src)
 		{
-			*((char *)(dst + i)) = *((char *)(src + i));
+			*((unsigned char *)(dst + i)) = *((unsigned char *)(src + i));
 			i++;
 		}
 		else
-			*((char *)(dst + len)) = *((char *)(src + len));
+			*((unsigned char *)(dst + len)) = *((unsigned char *)(src + len));
 	}
 	return (dst);
 }

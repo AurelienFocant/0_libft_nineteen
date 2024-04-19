@@ -20,9 +20,9 @@ static int	ft_is_sep(char c, char sep)
 		return (0);
 }
 
-static unsigned int	ft_count_strs(const char *s, char c)
+static size_t	ft_count_strs(const char *s, char c)
 {
-	unsigned int	count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
@@ -39,9 +39,9 @@ static unsigned int	ft_count_strs(const char *s, char c)
 	return (count);
 }
 
-static unsigned int	ft_len_strsep(const char *s, char c)
+static size_t	ft_len_strsep(const char *s, char c)
 {
-	unsigned int	len;
+	size_t	len;
 
 	len = 0;
 	while (!ft_is_sep(*s, c) && *s)
@@ -52,16 +52,10 @@ static unsigned int	ft_len_strsep(const char *s, char c)
 	return (len);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_fill_strs(const char *s, char c, char **split_s, size_t strs_count)
 {
-	unsigned int	strs_count;
-	char			**split_s;
-	unsigned int	i;
+	size_t	i;
 
-	strs_count = ft_count_strs(s, c);
-	split_s = malloc((strs_count + 1) * sizeof(char *));
-	if (!split_s)
-		return (NULL);
 	split_s[strs_count] = 0;
 	i = 0;
 	while (i < strs_count)
@@ -70,10 +64,32 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (!ft_is_sep(*s, c) && *s)
 		{
-			split_s[i++] = ft_substr(s, 0, ft_len_strsep(s, c));
+			split_s[i] = ft_substr(s, 0, ft_len_strsep(s, c));
+			if (!split_s[i])
+			{
+				while (i >= 0)
+					free(split_s[i--]);
+				free(split_s);
+				return (NULL);
+			}
+			i++;
 			while (!ft_is_sep(*s, c) && *s)
 				s++;
 		}
 	}
+	return (split_s);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	strs_count;
+	char	**split_s;
+
+	strs_count = ft_count_strs(s, c);
+	split_s = malloc((strs_count + 1) * sizeof(char *));
+	if (!split_s)
+		return (NULL);
+	if (!ft_fill_strs(s, c, split_s, strs_count))
+		return (NULL);
 	return (split_s);
 }
