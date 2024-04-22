@@ -55,8 +55,8 @@ static size_t	ft_len_strsep(const char *s, char c)
 char	**ft_fill_strs(const char *s, char c, char **split_s, size_t strs_count)
 {
 	size_t	i;
+	size_t	j;
 
-	split_s[strs_count] = 0;
 	i = 0;
 	while (i < strs_count)
 	{
@@ -67,8 +67,9 @@ char	**ft_fill_strs(const char *s, char c, char **split_s, size_t strs_count)
 			split_s[i] = ft_substr(s, 0, ft_len_strsep(s, c));
 			if (!split_s[i])
 			{
-				while (i >= 0)
-					free(split_s[i--]);
+				j = 0;
+				while (j < i)
+					free(split_s[j++]);
 				free(split_s);
 				return (NULL);
 			}
@@ -91,5 +92,6 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	if (!ft_fill_strs(s, c, split_s, strs_count))
 		return (NULL);
+	split_s[strs_count] = 0;
 	return (split_s);
 }

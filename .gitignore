@@ -1,7 +1,8 @@
 .DS_Store
-a.out.dSYM
 
 *.swp
 
-a.out
+a.out*
 *.o
+
+*.a
