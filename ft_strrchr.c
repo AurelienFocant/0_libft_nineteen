@@ -6,21 +6,11 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:06:50 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/17 21:06:52 by afocant          ###   ########.fr       */
+/*   Updated: 2024/04/23 14:23:54 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
-}
 
 char	*ft_strrchr(const char *s, int c)
 {

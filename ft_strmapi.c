@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:04:49 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/17 21:04:51 by afocant          ###   ########.fr       */
+/*   Updated: 2024/04/23 15:25:03 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	char			*res;
 	unsigned int	i;
 
+	if (!s || !f)
+		return (NULL);
 	res = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!res)
 		return (NULL);

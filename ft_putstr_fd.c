@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 20:59:34 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/17 20:59:36 by afocant          ###   ########.fr       */
+/*   Updated: 2024/04/23 15:04:19 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
+	if (fd <= 0)
+		return ;
 	write(fd, s, ft_strlen(s));
 }

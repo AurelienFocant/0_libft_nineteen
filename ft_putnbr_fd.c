@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 20:58:57 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/17 20:58:58 by afocant          ###   ########.fr       */
+/*   Updated: 2024/04/23 14:49:53 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd <= 0)
+		return ;
 	if (n == INT_MIN)
 	{
 		ft_putnbr_fd(n / 10, fd);

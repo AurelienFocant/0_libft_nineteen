@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:07:11 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/17 21:07:12 by afocant          ###   ########.fr       */
+/*   Updated: 2024/04/23 15:22:17 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 
+	if (!s1 || !set)
+		return (NULL);
 	if (!*s1)
 		return (ft_strdup(""));
 	start = 0;
