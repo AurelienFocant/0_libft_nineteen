@@ -53,8 +53,6 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-G_FLAG = -g
-
 #################################################
 
 NAME = libft.a
@@ -64,7 +62,7 @@ all: ${NAME}
 ${NAME}: ${LIB_OBJ}
 	ar -rcs $@ $^ 
 
-bonus: ${BONUS_OBJ} ${LIB_NAME}
+bonus: ${BONUS_OBJ} ${NAME}
 	ar -rcs ${NAME} ${BONUS_OBJ}
 
 %.o: %.c
