@@ -74,7 +74,7 @@ all: ${NAME}
 ${NAME}: ${LIB_OBJ}
 	ar -rcs $@ $^ 
 
-bonus: ${BONUS_OBJ} ${NAME}
+bonus: ${BONUS_OBJ} 
 	ar -rcs ${NAME} ${BONUS_OBJ}
 
 %.o: %.c
