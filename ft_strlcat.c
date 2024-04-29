@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:03:54 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/29 15:42:39 by afocant          ###   ########.fr       */
+/*   Updated: 2024/04/29 16:18:06 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	len_src = ft_strlen(src);
 	if ((dstsize == 0 && !dst))
-		return (len_src + dstsize);
+		return (len_src);
 	len_dst = ft_strlen(dst);
 	if (dstsize == 0 || dstsize <= len_dst)
 		return (len_src + dstsize);
