@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:00:58 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/25 14:26:41 by afocant          ###   ########.fr       */
+/*   Updated: 2024/04/29 15:47:58 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ static size_t	ft_len_strsep(const char *s, char c)
 	return (len);
 }
 
-static char	**ft_fill_strs(const char *s, char c, char **split_s, size_t strs_count)
+static char	**ft_fill_strs(const char *s, char c,
+								char **split_s, size_t strs_count)
 {
 	size_t	i;
 	size_t	j;
