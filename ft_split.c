@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:00:58 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/29 15:47:58 by afocant          ###   ########.fr       */
+/*   Updated: 2024/07/16 18:52:41 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,8 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	strs_count = ft_count_strs(s, c);
+	if (!strs_count)
+		return (NULL);
 	split_s = malloc((strs_count + 1) * sizeof(char *));
 	if (!split_s)
 		return (NULL);
