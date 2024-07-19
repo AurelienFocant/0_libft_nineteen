@@ -6,7 +6,7 @@
 #    By: afocant <afocant@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 14:26:45 by afocant           #+#    #+#              #
-#    Updated: 2024/07/19 14:19:33 by afocant          ###   ########.fr        #
+#    Updated: 2024/07/19 14:52:17 by afocant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,15 +22,17 @@ INC_DIR	=	includes
 
 #################################################
 
-CC = gcc
+CC		=	gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror
 
-GFLAGS = -g
+GFLAGS	=	-g
+
+DFLAGS	=	-fsanitize=address
 
 #################################################
 
-NAME = libft.a
+NAME	= libft.a
 
 all: $(NAME)
 
@@ -38,7 +40,7 @@ $(NAME): $(OBJ)
 	ar -rcs $@ $^ 
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(GFLAGS) -I$(INC_DIR) -c $< -o $@
+	$(CC) $(CFLAGS) $(GFLAGS) $(DFLAGS) -I$(INC_DIR) -c $< -o $@
 
 $(OBJ_DIR):
 	mkdir -p $@

@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:36:54 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/23 14:36:56 by afocant          ###   ########.fr       */
+/*   Updated: 2024/07/19 14:53:31 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+
+# include "ft_printf.h"
+# include "get_next_line.h"
 
 typedef struct s_list
 {
