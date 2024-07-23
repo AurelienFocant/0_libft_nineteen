@@ -6,18 +6,27 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 20:47:25 by afocant           #+#    #+#             */
-/*   Updated: 2024/04/17 20:47:27 by afocant          ###   ########.fr       */
+/*   Updated: 2024/07/24 00:32:08 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_is_a_space(char c)
+{
+	if (c == ' ' || (c >= '\t' && c <= '\r'))
+		return (1);
+	else
+		return (0);
+
+}
 
 int	ft_atoi(const char *str)
 {
 	int	n;
 	int	neg_flag;
 
-	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
+	while (ft_is_a_space(*str))
 		str++;
 	neg_flag = 1;
 	if (*str == '+')
