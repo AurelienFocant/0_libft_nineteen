@@ -12,7 +12,7 @@
 
 SRC_DIR	=	src
 
-SRC		=	$(wildcard $(SRC_DIR)/*.c)
+SRC		=	$(shell find $(SRC_DIR) -type f -name "*.c")
 
 OBJ_DIR	=	obj
 
@@ -32,15 +32,26 @@ DFLAGS	=	-fsanitize=address
 
 #################################################
 
-NAME	= libft.a
+CPU		=	$(shell uname -p)
+
+ifeq ($(CPU),arm)
+	NAME	=	libft_arm.a
+else
+	NAME	=	libft_x86.a
+endif
+
+
+#################################################
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -rcs $@ $^ 
+	@echo "compiling object files"
+	@echo "creating archive file"
+	@ar -rcs $@ $^ 
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(GFLAGS) $(DFLAGS) -I$(INC_DIR) -c $< -o $@
+	@$(CC) $(CFLAGS) $(GFLAGS) $(DFLAGS) -I$(INC_DIR) -c $< -o $@
 
 $(OBJ_DIR):
 	mkdir -p $@
