@@ -1,3 +1,6 @@
+FT_PRINTF_H	../includes/ft_printf.h	/^#define FT_PRINTF_H$/
+GET_NEXT_LINE_BONUS_H	../includes/get_next_line.h	/^#define GET_NEXT_LINE_BONUS_H$/
+LIBFT_H	../includes/libft.h	/^#define LIBFT_H$/
 ft_atoi	../src/ft_atoi.c	/^int	ft_atoi(const char *str)$/
 ft_atol	../src/ft_atol.c	/^long	ft_atol(const char *str)$/
 ft_bzero	../src/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/
@@ -67,3 +70,4 @@ ft_tolower	../src/ft_tolower.c	/^int	ft_tolower(int c)$/
 ft_toupper	../src/ft_toupper.c	/^int	ft_toupper(int c)$/
 ft_trim_stash	../src/get_next_line_utils.c	/^char	*ft_trim_stash(char *stash, char *start)$/
 get_next_line	../src/get_next_line.c	/^char	*get_next_line(int fd)$/
+t_list	../includes/libft.h	/^}					t_list;$/
