@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 16:02:57 by afocant           #+#    #+#             */
-/*   Updated: 2024/07/19 14:56:23 by afocant          ###   ########.fr       */
+/*   Updated: 2024/07/29 15:04:36 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	*ft_read_file(int fd, char **stash)
 		return (ft_free_and_null(stash));
 }
 
-char	*get_next_line(int fd)
+char	*ft_get_next_line(int fd)
 {
 	static char	*stash[FD_MAX];
 	char		*line;

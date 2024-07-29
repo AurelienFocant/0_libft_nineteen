@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 19:41:18 by afocant           #+#    #+#             */
-/*   Updated: 2024/07/26 16:19:45 by afocant          ###   ########.fr       */
+/*   Updated: 2024/07/29 15:04:17 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # include <sys/resource.h>
 # include <sys/syslimits.h>
 
-char	*get_next_line(int fd);
+char	*ft_get_next_line(int fd);
 char	*ft_read_file(int fd, char **stash);
 char	*ft_join_stash_buff(char *stash, char *buf, size_t buf_len);
 char	*ft_divide_stash(char **stash);
