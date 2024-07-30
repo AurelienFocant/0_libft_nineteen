@@ -28,7 +28,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 GFLAGS	=	-g
 
-DFLAGS	=	-fsanitize=address
+aDFLAGS	=	-fsanitize=address
 
 #################################################
 
