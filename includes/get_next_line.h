@@ -26,7 +26,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <sys/resource.h>
-# include <sys/syslimits.h>
+# include <limits.h>
 
 char	*ft_get_next_line(int fd);
 char	*ft_read_file(int fd, char **stash);
