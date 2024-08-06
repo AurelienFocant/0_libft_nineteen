@@ -16,8 +16,6 @@ CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 
 GFLAGS	=	-g
-
-DFLAGS	=	-fsanitize=address -fsanitize=undefined
 #---------------------------------------------------------#
 SRC_DIR		=	src
 
@@ -51,7 +49,7 @@ $(NAME): $(OBJ)
 	@ar -rcs $@ $^ 
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR) $(OBJ_SUBDIRS)
-	@$(CC) $(CFLAGS) $(GFLAGS) $(DFLAGS) -I$(INC_DIR) -c $< -o $@
+	@$(CC) $(CFLAGS) $(GFLAGS) -I$(INC_DIR) -c $< -o $@
 
 $(OBJ_DIR):
 	mkdir -p $@
