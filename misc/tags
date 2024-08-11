@@ -23,6 +23,8 @@ ft_isalpha	../src/str_fn/ft_isalpha.c	/^int	ft_isalpha(int c)$/
 ft_isascii	../src/str_fn/ft_isascii.c	/^int	ft_isascii(int c)$/
 ft_isdigit	../src/str_fn/ft_isdigit.c	/^int	ft_isdigit(int c)$/
 ft_isprint	../src/str_fn/ft_isprint.c	/^int	ft_isprint(int c)$/
+ft_isquote	../src/str_fn/ft_isquote.c	/^int	ft_isquote(int c)$/
+ft_isspace	../src/str_fn/ft_isspace.c	/^int	ft_isspace(int c)$/
 ft_itoa	../src/str_fn/ft_itoa.c	/^char	*ft_itoa(int n)$/
 ft_join_stash_buff	../src/get_next_line/get_next_line.c	/^char	*ft_join_stash_buff(char *stash, char *buf, s/
 ft_len_strsep	../src/str_fn/ft_split.c	/^static size_t	ft_len_strsep(const char *s, char c)/
@@ -47,6 +49,7 @@ ft_print_neg_nbr	../src/str_fn/ft_print_nbr.c	/^int	ft_print_neg_nbr(int n, char
 ft_print_ptr	../src/str_fn/ft_print_ptr.c	/^int	ft_print_ptr(unsigned long long n)$/
 ft_print_ptr_base	../src/str_fn/ft_print_ptr.c	/^int	ft_print_ptr_base(unsigned long long n, char */
 ft_print_string	../src/printf/ft_printf_utils.c	/^int	ft_print_string(char *s)$/
+ft_print_strv	../src/str_fn/ft_print_strv.c	/^void	ft_print_strv(char **strv)$/
 ft_print_unsigned_nbr_base	../src/str_fn/ft_print_nbr.c	/^int	ft_print_unsigned_nbr_base(unsigned int n, cha/
 ft_printf	../src/printf/ft_printf.c	/^int	ft_printf(const char *format, ...)$/
 ft_putchar_fd	../src/str_fn/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/
