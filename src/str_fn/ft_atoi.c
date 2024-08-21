@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 20:47:25 by afocant           #+#    #+#             */
-/*   Updated: 2024/07/24 00:32:08 by afocant          ###   ########.fr       */
+/*   Updated: 2024/08/21 16:59:55 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	ft_is_a_space(char c)
 		return (1);
 	else
 		return (0);
-
 }
 
 int	ft_atoi(const char *str)
