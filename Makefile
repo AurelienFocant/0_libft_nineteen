@@ -44,8 +44,6 @@ endif
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "compiling object files"
-	@echo "creating archive file"
 	@ar -rcs $@ $^ 
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR) $(OBJ_SUBDIRS)
