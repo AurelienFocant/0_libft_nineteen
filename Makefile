@@ -6,7 +6,7 @@
 #    By: afocant <afocant@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 14:26:45 by afocant           #+#    #+#              #
-#    Updated: 2024/07/29 17:45:31 by afocant          ###   ########.fr        #
+#    Updated: 2024/08/29 19:24:18 by afocant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,9 @@ OBJ			=	$(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 #---------------------------------------------------------#
 INC_DIR		=	includes
 
-CPU		=	$(shell uname -p)
+INC_FLAGS	=	-I$(INC_DIR)
 
+CPU		=	$(shell uname -p)
 ifeq ($(CPU),arm)
 	NAME	=	libft_arm.a
 else
@@ -45,15 +46,15 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar -rcs $@ $^ 
+	@echo "LIBFT has been created"
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR) $(OBJ_SUBDIRS)
-	@$(CC) $(CFLAGS) $(GFLAGS) -I$(INC_DIR) -c $< -o $@
+	@$(CC) $(CFLAGS) $(GFLAGS) $(INC_FLAGS) -c $< -o $@
 
 $(OBJ_DIR):
-	mkdir -p $@
-
+	@mkdir -p $@
 $(OBJ_SUBDIRS):
-	mkdir -p $@
+	@mkdir -p $@
 
 clean:
 	rm -rf $(OBJ_DIR)
