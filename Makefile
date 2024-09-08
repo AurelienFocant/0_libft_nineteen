@@ -15,7 +15,7 @@ CC		=	cc
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-GFLAGS	=	-g
+GFLAGS	=	-g3
 #---------------------------------------------------------#
 SRC_DIR		=	src
 
@@ -57,8 +57,9 @@ $(OBJ_SUBDIRS):
 	@mkdir -p $@
 
 clean:
-	rm -rf $(OBJ_DIR)
+	@rm -rf $(OBJ_DIR)
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "LIBFT fully cleaned"
 
 re: fclean all
