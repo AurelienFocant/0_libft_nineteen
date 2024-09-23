@@ -1,7 +1,5 @@
-BUFFER_SIZE	../includes/get_next_line.h	/^#  define BUFFER_SIZE 42$/
-FD_MAX	../includes/get_next_line.h	/^#  define FD_MAX 256$/
 FT_PRINTF_H	../includes/ft_printf.h	/^#define FT_PRINTF_H$/
-GET_NEXT_LINE_BONUS_H	../includes/get_next_line.h	/^#define GET_NEXT_LINE_BONUS_H$/
+GET_NEXT_LINE_H	../includes/get_next_line.h	/^#define GET_NEXT_LINE_H$/
 LIBFT_H	../includes/libft.h	/^#define LIBFT_H$/
 ft_atoi	../src/str_fn/ft_atoi.c	/^int	ft_atoi(const char *str)$/
 ft_atol	../src/str_fn/ft_atol.c	/^long	ft_atol(const char *str)$/
@@ -13,6 +11,9 @@ ft_extract_line	../src/get_next_line/get_next_line_utils.c	/^char	*ft_extract_li
 ft_fill_strs	../src/str_fn/ft_split.c	/^static char	**ft_fill_strs(const char *s, char c,$/
 ft_findlen	../src/str_fn/ft_itoa.c	/^static int	ft_findlen(int n)$/
 ft_free_and_null	../src/get_next_line/get_next_line_utils.c	/^char	*ft_free_and_null(char **str)$/
+ft_free_null	../src/mem_fn/ft_free_null.c	/^void	ft_free_null(void **ptr)$/
+ft_free_null_strv	../src/mem_fn/ft_free_null_strv.c	/^void	ft_free_null_strv(char ***strv)$/
+ft_free_strv	../src/mem_fn/ft_free_strv.c	/^void	ft_free_strv(char **strv)$/
 ft_get_next_line	../src/get_next_line/get_next_line.c	/^char	*ft_get_next_line(int fd)$/
 ft_getlen	../src/printf/ft_printf_utils.c	/^int	ft_getlen(char *s)$/
 ft_is_a_space	../src/str_fn/ft_atoi.c	/^int	ft_is_a_space(char c)$/
