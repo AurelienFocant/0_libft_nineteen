@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:36:54 by afocant           #+#    #+#             */
-/*   Updated: 2024/07/24 00:02:01 by afocant          ###   ########.fr       */
+/*   Updated: 2024/09/23 13:28:00 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_free_null(void **ptr);
 void	ft_free_null_strv(char ***strv);
+void	ft_free_strv(char **strv);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
