@@ -6,7 +6,7 @@
 #    By: afocant <afocant@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 14:26:45 by afocant           #+#    #+#              #
-#    Updated: 2024/08/29 19:24:18 by afocant          ###   ########.fr        #
+#    Updated: 2024/09/24 11:52:33 by afocant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ OBJ_SUBDIRS	=	$(SRC_SUBDIRS:$(SRC_DIR)%=$(OBJ_DIR)%)
 
 OBJ			=	$(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 #---------------------------------------------------------#
-INC_DIR		=	includes
+INC_DIR		=	include
 
 INC_FLAGS	=	-I$(INC_DIR)
 
