@@ -33,11 +33,19 @@ INC_DIR		=	include
 
 INC_FLAGS	=	-I$(INC_DIR)
 
-CPU		=	$(shell uname -p)
-ifeq ($(CPU),arm)
-	NAME	=	libft_arm.a
-else
-	NAME	=	libft_x86.a
+DARWIN_ARM64	=	$(shell uname -a | grep Darwin | grep -E '(aarch64|arm64)')
+DARWIN_X86		=	$(shell uname -a | grep Darwin | grep x86)
+LINUX_ARM64		=	$(shell uname -a | grep Linux  | grep -E '(aarch64|arm64)')
+LINUX_X86		=	$(shell uname -a | grep Linux  | grep x86)
+
+ifneq ($(DARWIN_ARM64),)
+	NAME	=	libft_darwin_arm64.a
+else ifneq ($(DARWIN_X86),)
+	NAME	=	libft_darwin_x86.a
+else ifneq ($(LINUX_ARM64),)
+	NAME	=	libft_linux_arm64.a
+else ifneq ($(LINUX_X86),)
+	NAME	=	libft_linux_x86.a
 endif
 
 .PHONY: all clean fclean re
