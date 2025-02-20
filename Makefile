@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#                                                       :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: afocant <afocant@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/25 14:26:45 by afocant           #+#    #+#              #
-#    Updated: 2024/09/28 16:34:49 by afocant          ###   ########.fr        #
+#    Updated: 2025/02/20 08:06:37 by afocant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ INC_FLAGS	=	-I$(INC_DIR)
 
 NAME		=	libft.a
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re lsp
 #---------------------------------------------------------#
 all: $(NAME)
 
@@ -58,3 +58,10 @@ fclean: clean
 	@echo "LIBFT fully cleaned"
 
 re: fclean all
+
+#---------------------------------------------------------#
+lsp: fclean
+	rm -rf ./misc/compile_commands.json
+	rm -rf ./misc/.cache
+	bear --output ./misc/compile_commands.json -- make
+
