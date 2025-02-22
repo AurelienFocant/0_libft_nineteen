@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 09:09:49 by afocant           #+#    #+#             */
-/*   Updated: 2025/02/22 09:42:46 by afocant          ###   ########.fr       */
+/*   Updated: 2025/02/22 10:10:22 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,13 +69,4 @@ char	*ft_cat_strs(int nb, ...)
 	}
 	va_end(args);
 	return (res);
-}
-
-#include <stdio.h>
-
-int	main()
-{
-	char *s = ft_cat_strs(3, "1", "2", "3");
-	printf("%s\n", s); 
-	printf("%zu\n", ft_strlen(s)); 
 }
