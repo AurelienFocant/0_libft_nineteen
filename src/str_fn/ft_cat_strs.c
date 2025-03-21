@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 09:09:49 by afocant           #+#    #+#             */
-/*   Updated: 2025/02/22 10:10:22 by afocant          ###   ########.fr       */
+/*   Updated: 2025/03/21 11:43:38 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdarg.h>
 
-char	*cat_s1_s2(char *res, char* s1, char *s2)
+char	*cat_s1_s2(char *res, char *s1, char *s2)
 {
 	size_t	i;
 
@@ -30,7 +30,7 @@ char	*cat_s1_s2(char *res, char* s1, char *s2)
 	return (res);
 }
 
-char	*cat_strs(char *s1, char *s2) 
+char	*cat_strs(char *s1, char *s2)
 {
 	size_t	len1;
 	size_t	len2;
