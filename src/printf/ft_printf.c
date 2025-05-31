@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 16:48:56 by afocant           #+#    #+#             */
-/*   Updated: 2025/01/28 10:52:46 by afocant          ###   ########.fr       */
+/*   Updated: 2025/03/21 11:43:08 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	ft_parse_arg(int fd, char c, va_list *arg)
 	if (c == 'i' || c == 'd')
 		count += ft_print_nbr_base(fd, va_arg(*arg, int), "0123456789");
 	else if (c == 'u')
-		count += ft_print_unsigned_nbr_base(fd, va_arg(*arg, int), "0123456789");
+		count += ft_print_unsigned_nbr_base(fd, va_arg(*arg, int),
+				"0123456789");
 	else if (c == 'x')
 		count += ft_print_unsigned_nbr_base \
 				(fd, va_arg(*arg, int), "0123456789abcdef");
