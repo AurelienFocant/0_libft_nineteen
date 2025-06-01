@@ -6,7 +6,7 @@
 /*   By: afocant <afocant@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 14:36:54 by afocant           #+#    #+#             */
-/*   Updated: 2025/02/22 10:10:31 by afocant          ###   ########.fr       */
+/*   Updated: 2025/06/01 18:19:12 by afocant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_atoi(const char *str);
 long	ft_atol(const char *str);
+double	ft_atof(char *str);
 char	*ft_itoa(int n);
 void	ft_bzero(void *s, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
