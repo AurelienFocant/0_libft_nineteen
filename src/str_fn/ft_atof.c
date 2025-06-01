@@ -26,7 +26,7 @@ int	parse_sign(char **s)
 	return (neg_flag);
 }
 
-int	ft_atof(char *str)
+double	ft_atof(char *str)
 {
 	double	n;
 	double	fraction;
@@ -43,7 +43,7 @@ int	ft_atof(char *str)
 	{
 		str++;
 		fraction = 0.0;
-		divider = 0;
+		divider = 1;
 		while (ft_isdigit(*str))
 		{
 			fraction = (fraction * 10) + (*str++ - '0');
