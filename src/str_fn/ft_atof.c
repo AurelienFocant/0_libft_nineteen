@@ -26,7 +26,7 @@ int	parse_sign(char **s)
 	return (neg_flag);
 }
 
-int	ft_atof(char *str)
+double	ft_atof(char *str)
 {
 	double	n;
 	double	fraction;
